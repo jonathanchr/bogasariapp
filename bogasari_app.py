@@ -8,7 +8,7 @@ import openpyxl
 
 st.set_page_config(page_title="Bogasari App",layout="wide")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
-image = Image.open('logo_bogasari.jpg')
+image = Image.open('https://github.com/jonathanchr/bogasariapp/blob/main/logo_bogasari.jpg')
 
 
 # IMAGE & TITLE
@@ -35,7 +35,7 @@ with col1:
     """
     st.markdown(html_title, unsafe_allow_html=True)
 with col2:
-    image = st.image('logo_bogasari.jpg')
+    image = st.image('https://github.com/jonathanchr/bogasariapp/blob/main/logo_bogasari.jpg')
 
 
 # DATETIME
@@ -47,21 +47,21 @@ with col3:
 
 # READING DATA
 df = pd.read_excel(
-    io="FullOutlet.xlsx", 
+    io="https://github.com/jonathanchr/bogasariapp/blob/main/FullOutlet.xlsx", 
     engine="openpyxl", 
     sheet_name="Data1", 
     usecols="A:G", 
     nrows=4000)
 
 df_ach = pd.read_excel(
-    io="FullOutlet.xlsx", #file name
+    io="https://github.com/jonathanchr/bogasariapp/blob/main/FullOutlet.xlsx", #file name
     engine="openpyxl", #library
     sheet_name="Achievement", 
     usecols="A:G", #which columns you want to use
     nrows=4000, #how many rows are included in your selection   
 )
 df_grw = pd.read_excel(
-    io="FullOutlet.xlsx", #file name
+    io="https://github.com/jonathanchr/bogasariapp/blob/main/FullOutlet.xlsx", #file name
     engine="openpyxl", #library
     sheet_name="Growth", 
     usecols="A:G", #which columns you want to use
