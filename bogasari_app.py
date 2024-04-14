@@ -5,6 +5,7 @@ from PIL import Image
 import plotly_express as px
 import plotly.graph_objects as go
 import openpyxl
+import xlrd
 import requests
 from io import BytesIO
 
@@ -54,21 +55,21 @@ with col3:
 # READING DATA
 df = pd.read_excel(
     io="https://github.com/jonathanchr/bogasariapp/blob/main/FullOutlet.xlsx", 
-    engine="openpyxl", 
+    engine="xlrd", 
     sheet_name="Data1", 
     usecols="A:G", 
     nrows=4000)
 
 df_ach = pd.read_excel(
     io="https://github.com/jonathanchr/bogasariapp/blob/main/FullOutlet.xlsx", #file name
-    engine="openpyxl", #library
+    engine="xlrd", #library
     sheet_name="Achievement", 
     usecols="A:G", #which columns you want to use
     nrows=4000, #how many rows are included in your selection   
 )
 df_grw = pd.read_excel(
     io="https://github.com/jonathanchr/bogasariapp/blob/main/FullOutlet.xlsx", #file name
-    engine="openpyxl", #library
+    engine="xlrd", #library
     sheet_name="Growth", 
     usecols="A:G", #which columns you want to use
     nrows=4000, #how many rows are included in your selection   
